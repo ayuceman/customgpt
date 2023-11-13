@@ -1,0 +1,23 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Web App</title>
+</head>
+<body>
+    <h1>Your Web App</h1>
+    
+    <form action="/myapp" method="post">
+        <label for="query">Enter Query:</label>
+        <input type="text" id="query" name="query" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if message %}
+    <div>{{ message | safe}}</div>
+{% endif %}
+
+</body>
+</html>
